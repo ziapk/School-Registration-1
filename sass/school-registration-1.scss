@@ -1,0 +1,189 @@
+/* ####################################################
+NOTE
+scss file for school profile
+###################################################
+*/
+
+@import "bootstrap-responsive";
+
+
+$gridFluidColumnWidth: 6.38298%;
+$gridFluidGutterWidth: 2.12766%;
+
+@mixin makeFluidRow() {
+  width: 100%;
+  @include clearfix();
+}
+@mixin makeFluidColumn($columns: 1, $offset: 0, $marginRate: 1) {
+  float: left;
+  margin-left: (($gridFluidColumnWidth * $offset) + ($gridFluidGutterWidth * ($offset - 1)) + ($gridFluidGutterWidth * 2)) * $marginRate;
+  width: ($gridFluidColumnWidth * $columns) + ($gridFluidGutterWidth * ($columns - 1));
+  
+  &:first-child {
+        margin-left: 0;
+  }
+}
+
+
+/** Global Fonts **/
+$Normal: 'ProximaNova-Regular';
+$Semibold: 'ProximaNova-Semibold';
+$Bold: 'ProximaNova-Bold';
+$Italic: 'ProximaNova-RegularIt';
+
+/** Global Type Size **/
+$PageHeading: 36px $Normal;
+$IntroText: 14px/20px $Normal;
+$Subheading: 20px/24px $Bold;
+$BodyText: 14px/17px $Normal;
+
+/** Global Color **/
+$Red: #96171A;
+$Gray: #5f6a72;
+$Lightgray: #D3D1C7;
+$Blue: #1E398D;
+$Orange: #F37021;
+
+/** Global Radius **/
+$LargeRadius: 20px;
+$SmallRadius: 4px;
+
+/** Global Lines **/
+$NormalLine: 1px solid $Lightgray;
+
+/** Global Drop Shadow **/
+$LargeShadow: 2px 3px 20px #5f6a72;
+$MediumShadow: 5px 5px 5px #c8ccce;
+$SmallShadow: 1px 1px 15px #8a9aa6;
+$TinyShadow: 0px 2px 5px #c8ccce;
+
+$margin_padding: 15px;
+$icon_font_size: 20px;
+
+.ya-article {
+    @include makeFluidRow();
+    margin: $margin_padding * 2 0;
+    .ya-main {
+        @include makeFluidColumn(9);
+		@media (max-width: 979px) {
+			 @include makeFluidColumn(12, 0, 0);
+		}
+    }
+    .ya-right-sidebar {
+        @include makeFluidColumn(3);
+    }
+}
+
+.ya-school-registration {
+    padding: $margin_padding * 2;
+	@media (max-width: 767px) {
+		padding: $margin_padding * 2 $margin_padding;
+	}
+	h1 {
+		font: $PageHeading;
+		@media (max-width: 460px) {
+			font-size: 25px;
+		}
+	}
+	.ya-widget {
+		h3 {
+			border-bottom: $NormalLine;
+		}
+	}
+	hr {
+		border-bottom: $NormalLine;
+	}		
+}
+.ya-school-registration-video {
+	width: 80%;
+	margin: $margin_padding * 2 auto;
+	@media (max-width: 767px) {
+		width: 100%;
+	}
+
+	.ya-video-container {
+	    position: relative;
+	    padding-bottom: 56.25%;
+	    padding-top: 30px; 
+		height: 0; 
+		overflow: hidden;
+		iframe, object, embed {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;	
+		}
+	}	
+}
+
+
+.ya-school-registration-block {
+	@include makeFluidRow();
+}
+@mixin ya-control-group {
+    margin-bottom: $margin_padding;
+}
+@mixin ya-checkbox-group {
+  @include clearfix();
+  margin: $margin_padding / 2 0;
+}
+
+.ya-school-name {
+	@include ya-control-group;
+	input[type='text'] {
+		width: 95%;
+	}
+}
+.ya-legal-agreement-list {
+	margin-left: 23px;
+	p {
+		margin: 0;
+	}
+	ul {
+		margin: 0 0 0 14px;;
+	}
+}
+
+.ya-legal-agreement-check {
+	@include ya-checkbox-group;
+	input[type='checkbox'] {
+		float: left;
+		margin-right: 10px;
+	}
+}
+.ya-code-conduct-check {
+	@extend .ya-legal-agreement-check;
+	label {
+		float: left;
+		margin-right: $margin_padding;
+	}
+}
+.ya-italic {
+	font-family: $Italic;
+}
+.ya-ower-option {
+	input[type='radio'] {
+		float: left;
+		margin-right: 6px;
+	}
+}
+.ya-add-staff-member-option {
+	@extend .ya-ower-option;
+	p {
+		margin-left: $margin_padding;
+	}
+}
+
+span[data-icon] {
+  font-size: $icon_font_size;
+}
+.ya-continue-btn {
+	@media (max-width: 460px) {
+		text-align: center;
+	}
+}
+.ya-add-staff-member {
+	display: none;
+}
+
