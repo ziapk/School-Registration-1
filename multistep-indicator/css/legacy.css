@@ -143,3 +143,21 @@ div.multi-step.five-steps ol > li .bg {
 		top:6px;
 	}
 }
+@media (min-width:768px) and (max-width:979px){
+	div.multi-step ol > li {
+		height:70px
+	}
+	div.multi-step.numbered ol > li .wrap{
+		padding-left:23%;
+	}
+}
+@media (max-width:767px){
+	body{
+		padding:0 !important;
+	}
+	div.multi-step.numbered ol > li.current .num,
+	div.multi-step.numbered ol > li.current ~ li .num{
+		position:relative;
+		z-index:999;
+	}	
+}

@@ -44,6 +44,16 @@ Created by Jeff Baker
 		padding-bottom: $default-margin/2;
 	}
 }
+.ya-school-registration{
+	.ya-add-staff-member-option,
+	.ya-code-conduct-check,
+	.ya-ower-option{
+		@include clearfix;
+	}
+	label{
+		display:inline-block !important;
+	}
+}
 // Yellow containers - contain edit forms  
 .ya-edit-box {
 	@include default-border; 
@@ -273,13 +283,6 @@ span[data-icon="E"], span[data-icon="C"]{
 
 // ################# PAGE REVIEW QUEUE 2 ##################
 
-.container-fluid {
-	background-color: white;
-	max-width: 1170px;
-	margin: 0 auto;
-	border-radius: 6px;
-	border: 1px solid $dark-brown;
-}
 
 //@include grid-test;
 

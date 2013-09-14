@@ -1285,14 +1285,6 @@ scss file for school profile
   margin-left: 0;
 }
 
-.ya-school-registration {
-  padding: 30px;
-}
-@media (max-width: 767px) {
-  .ya-school-registration {
-    padding: 30px 15px;
-  }
-}
 .ya-school-registration h1 {
   font: 36px "ProximaNova-Regular";
 }
@@ -1309,7 +1301,6 @@ scss file for school profile
 }
 
 .ya-school-registration-video {
-  width: 80%;
   margin: 30px auto;
 }
 @media (max-width: 767px) {
@@ -1318,11 +1309,11 @@ scss file for school profile
   }
 }
 .ya-school-registration-video .ya-video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 30px;
-  height: 0;
   overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  max-width: 626px !important;
+  height: 312px !important;
 }
 .ya-school-registration-video .ya-video-container iframe, .ya-school-registration-video .ya-video-container object, .ya-school-registration-video .ya-video-container embed {
   position: absolute;

@@ -75,10 +75,6 @@ $icon_font_size: 20px;
 }
 
 .ya-school-registration {
-    padding: $margin_padding * 2;
-	@media (max-width: 767px) {
-		padding: $margin_padding * 2 $margin_padding;
-	}
 	h1 {
 		font: $PageHeading;
 		@media (max-width: 460px) {
@@ -95,18 +91,17 @@ $icon_font_size: 20px;
 	}		
 }
 .ya-school-registration-video {
-	width: 80%;
 	margin: $margin_padding * 2 auto;
 	@media (max-width: 767px) {
 		width: 100%;
 	}
 
 	.ya-video-container {
-	    position: relative;
-	    padding-bottom: 56.25%;
-	    padding-top: 30px; 
-		height: 0; 
 		overflow: hidden;
+		position:relative;
+		margin:0 auto;
+		max-width:626px !important;
+		height:312px !important;
 		iframe, object, embed {
 		    position: absolute;
 		    top: 0;
