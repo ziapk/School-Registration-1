@@ -576,9 +576,6 @@ td.ya-label {
   overflow: hidden;
   *zoom: 1;
 }
-.ya-school-registration label {
-  display: inline-block !important;
-}
 
 .ya-edit-box {
   border: 1px solid #d6cdbf;
